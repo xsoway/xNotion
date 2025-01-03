@@ -61,12 +61,15 @@ const BLOG = {
   // 后面空格隔开的font-light的字体粗细，留空是默认粗细；参考 https://www.tailwindcss.cn/docs/font-weight
   FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans font-light',
   FONT_URL: [
-  // 使用 Google Fonts 提供的友好字体
-  'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;700&family=Open+Sans:wght@300;400;700&display=swap',
+  // Notion 默认使用 Inter 和 Noto 系列字体，可以通过 Google Fonts 获取
+  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap',
+  'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap',
+  'https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;700&display=swap',
   ],
+  // 无衬线字体，适配 Notion 的现代感
   FONT_SANS: [
-  // Open Sans - 无衬线字体，适合长时间阅读
-  '"Open Sans"',
+  '"Inter"', // Notion 的主要无衬线字体
+  '"Noto Sans"',
   '-apple-system',
   'BlinkMacSystemFont',
   '"Segoe UI"',
@@ -75,15 +78,18 @@ const BLOG = {
   'sans-serif',
   '"Apple Color Emoji"'
   ],
+  // 衬线字体，用于段落或标题的更正式风格
   FONT_SERIF: [
-  // Merriweather 和 Lora - 友好的衬线字体，适合正文显示
-  '"Merriweather"',
-  '"Lora"',
+  '"Noto Serif"', // Notion 的主要衬线字体
   'Georgia',
   '"Times New Roman"',
+  'Times',
   'serif',
   '"Apple Color Emoji"'
   ],
+  // 背景色和样式（可以通过 CSS 控制）
+  BACKGROUND_STYLE: process.env.NEXT_PUBLIC_BACKGROUND_STYLE || '#ffffff', // 默认白色背景，与 Notion 风格一致
+  TEXT_COLOR: process.env.NEXT_PUBLIC_TEXT_COLOR || '#2e3438', // Notion 的默认文字颜色
   FONT_AWESOME:
     process.env.NEXT_PUBLIC_FONT_AWESOME_PATH ||
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', // font-awesome 字体图标地址; 可选 /css/all.min.css ， https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css
