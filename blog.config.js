@@ -61,28 +61,25 @@ const BLOG = {
   // 后面空格隔开的font-light的字体粗细，留空是默认粗细；参考 https://www.tailwindcss.cn/docs/font-weight
   FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans font-light',
   FONT_URL: [
-  // 使用 Google Fonts 提供的友好字体
-  'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;700&family=Open+Sans:wght@300;400;700&display=swap',
+    'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;700&family=Open+Sans:wght@300;400;700&display=swap',
   ],
   FONT_SANS: [
-  // Open Sans - 无衬线字体，适合长时间阅读
-  '"Open Sans"',
-  '-apple-system',
-  'BlinkMacSystemFont',
-  '"Segoe UI"',
-  '"Helvetica Neue"',
-  'Arial',
-  'sans-serif',
-  '"Apple Color Emoji"'
+    '"Open Sans"',
+    '-apple-system',
+    'BlinkMacSystemFont',
+    '"Segoe UI"',
+    '"Helvetica Neue"',
+    'Arial',
+    'sans-serif',
+    '"Apple Color Emoji"',
   ],
   FONT_SERIF: [
-  // Merriweather 和 Lora - 友好的衬线字体，适合正文显示
-  '"Merriweather"',
-  '"Lora"',
-  'Georgia',
-  '"Times New Roman"',
-  'serif',
-  '"Apple Color Emoji"'
+    '"Merriweather"',
+    '"Lora"',
+    'Georgia',
+    '"Times New Roman"',
+    'serif',
+    '"Apple Color Emoji"',
   ],
   FONT_AWESOME:
     process.env.NEXT_PUBLIC_FONT_AWESOME_PATH ||
