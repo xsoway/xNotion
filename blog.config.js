@@ -49,52 +49,41 @@ const BLOG = {
 
   IMAGE_COMPRESS_WIDTH: process.env.NEXT_PUBLIC_IMAGE_COMPRESS_WIDTH || 800, // 图片压缩宽度默认值，作用于博客封面和文章内容 越小加载图片越快
   IMAGE_ZOOM_IN_WIDTH: process.env.NEXT_PUBLIC_IMAGE_ZOOM_IN_WIDTH || 1200, // 文章图片点击放大后的画质宽度，不代表在网页中的实际展示宽度
-  RANDOM_IMAGE_URL: process.env.NEXT_PUBLIC_RANDOM_IMAGE_URL || 'images.unsplash.com/', // 随机图片API,如果未配置下面的关键字，主页封面，头像，文章封面图都会被替换为随机图片
+  RANDOM_IMAGE_URL: process.env.NEXT_PUBLIC_RANDOM_IMAGE_URL || 'ihttps://picsum.photos/800/600', // 随机图片API,如果未配置下面的关键字，主页封面，头像，文章封面图都会被替换为随机图片
   RANDOM_IMAGE_REPLACE_TEXT:
     process.env.NEXT_PUBLIC_RANDOM_IMAGE_NOT_REPLACE_TEXT ||
-    'images.unsplash.com', // 触发替换图片的 url 关键字(多个支持用英文逗号分开)，只有图片地址中包含此关键字才会替换为上方随机图片url
+    'images.unsplash.com', 'picsum.photos/800/600'// 触发替换图片的 url 关键字(多个支持用英文逗号分开)，只有图片地址中包含此关键字才会替换为上方随机图片url
   // eg: images.unsplash.com(notion图床的所有图片都会替换),如果你在 notion 里已经添加了一个随机图片 url，恰巧那个服务跑路或者挂掉，想一键切换所有配图可以将该 url 配置在这里
   // 默认下会将你上传到 notion的主页封面图和头像也给替换，建议将主页封面图和头像放在其他图床，在 notion 里配置 link 即可。
 
   // START ************网站字体*****************
   // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
   // 后面空格隔开的font-light的字体粗细，留空是默认粗细；参考 https://www.tailwindcss.cn/docs/font-weight
-  FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-serif font-medium',
-  FONT_URL: [
-  'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap',
-  'https://fonts.googleapis.com/css?family=Bitter&display=swap',
-  ],
-  FONT_SANS: [
-    '"Roboto"',
-    '"PingFang SC"',
-    '-apple-system',
-    'BlinkMacSystemFont',
-    '"Hiragino Sans GB"',
-    '"Microsoft YaHei"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-    '"Segoe UI"',
-    '"Noto Sans SC"',
-    'HarmonyOS_Regular',
-    '"Helvetica Neue"',
-    'Helvetica',
-    '"Source Han Sans SC"',
-    'Arial',
-    'sans-serif',
-    '"Apple Color Emoji"'
-  ],
-  FONT_SERIF: [
-    '"Roboto Slab"',
-    'Bitter',
-    '"Noto Serif SC"',
-    'SimSun',
-    '"Times New Roman"',
-    'Times',
-    'serif',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-    '"Apple Color Emoji"'
-  ],
+  FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans font-light',
+FONT_URL: [
+  // 使用 Google Fonts 提供的友好字体
+  'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;700&family=Open+Sans:wght@300;400;700&display=swap',
+],
+FONT_SANS: [
+  // Open Sans - 无衬线字体，适合长时间阅读
+  '"Open Sans"',
+  '-apple-system',
+  'BlinkMacSystemFont',
+  '"Segoe UI"',
+  '"Helvetica Neue"',
+  'Arial',
+  'sans-serif',
+  '"Apple Color Emoji"'
+],
+FONT_SERIF: [
+  // Merriweather 和 Lora - 友好的衬线字体，适合正文显示
+  '"Merriweather"',
+  '"Lora"',
+  'Georgia',
+  '"Times New Roman"',
+  'serif',
+  '"Apple Color Emoji"'
+],
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
     // '"LXGW WenKai"',
