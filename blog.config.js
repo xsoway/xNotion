@@ -52,7 +52,7 @@ const BLOG = {
   RANDOM_IMAGE_URL: process.env.NEXT_PUBLIC_RANDOM_IMAGE_URL || 'https://picsum.photos/800/600', // 随机图片API,如果未配置下面的关键字，主页封面，头像，文章封面图都会被替换为随机图片
   RANDOM_IMAGE_REPLACE_TEXT:
     process.env.NEXT_PUBLIC_RANDOM_IMAGE_NOT_REPLACE_TEXT ||
-    'images.unsplash.com', // 触发替换图片的 url 关键字(多个支持用英文逗号分开)，只有图片地址中包含此关键字才会替换为上方随机图片url
+    'https://picsum.photos/800/600', // 触发替换图片的 url 关键字(多个支持用英文逗号分开)，只有图片地址中包含此关键字才会替换为上方随机图片url
   // eg: images.unsplash.com(notion图床的所有图片都会替换),如果你在 notion 里已经添加了一个随机图片 url，恰巧那个服务跑路或者挂掉，想一键切换所有配图可以将该 url 配置在这里
   // 默认下会将你上传到 notion的主页封面图和头像也给替换，建议将主页封面图和头像放在其他图床，在 notion 里配置 link 即可。
 
@@ -60,36 +60,44 @@ const BLOG = {
   // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
   // 后面空格隔开的font-light的字体粗细，留空是默认粗细；参考 https://www.tailwindcss.cn/docs/font-weight
   FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans font-light',
+  // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
   FONT_URL: [
-  // Notion 默认使用 Inter 和 Noto 系列字体，可以通过 Google Fonts 获取
-  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap',
-  'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap',
-  'https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;700&display=swap',
+    'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap',
+    'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
+    'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
   ],
-  // 无衬线字体，适配 Notion 的现代感
+  // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
-  '"Inter"', // Notion 的主要无衬线字体
-  '"Noto Sans"',
-  '-apple-system',
-  'BlinkMacSystemFont',
-  '"Segoe UI"',
-  '"Helvetica Neue"',
-  'Arial',
-  'sans-serif',
-  '"Apple Color Emoji"'
+    'Roboto',
+    '"PingFang SC"',
+    '-apple-system',
+    'BlinkMacSystemFont',
+    '"Hiragino Sans GB"',
+    '"Microsoft YaHei"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+    '"Segoe UI"',
+    '"Noto Sans SC"',
+    'HarmonyOS_Regular',
+    '"Helvetica Neue"',
+    'Helvetica',
+    '"Source Han Sans SC"',
+    'Arial',
+    'sans-serif',
+    '"Apple Color Emoji"'
   ],
-  // 衬线字体，用于段落或标题的更正式风格
+  // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
-  '"Noto Serif"', // Notion 的主要衬线字体
-  'Georgia',
-  '"Times New Roman"',
-  'Times',
-  'serif',
-  '"Apple Color Emoji"'
+    'Roboto',
+    '"Noto Serif SC"',
+    'SimSun',
+    '"Times New Roman"',
+    'Times',
+    'serif',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+    '"Apple Color Emoji"'
   ],
-  // 背景色和样式（可以通过 CSS 控制）
-  BACKGROUND_STYLE: process.env.NEXT_PUBLIC_BACKGROUND_STYLE || '#ffffff', // 默认白色背景，与 Notion 风格一致
-  TEXT_COLOR: process.env.NEXT_PUBLIC_TEXT_COLOR || '#2e3438', // Notion 的默认文字颜色
   FONT_AWESOME:
     process.env.NEXT_PUBLIC_FONT_AWESOME_PATH ||
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', // font-awesome 字体图标地址; 可选 /css/all.min.css ， https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css
