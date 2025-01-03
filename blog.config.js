@@ -62,41 +62,32 @@ const BLOG = {
   FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans font-light',
   // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
   FONT_URL: [
-    'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
+    'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&display=swap',
+    'https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500&display=swap'
   ],
   // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
-    'Roboto',
-    '"PingFang SC"',
     '-apple-system',
     'BlinkMacSystemFont',
-    '"Hiragino Sans GB"',
-    '"Microsoft YaHei"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
     '"Segoe UI"',
-    '"Noto Sans SC"',
-    'HarmonyOS_Regular',
-    '"Helvetica Neue"',
+    '"Noto Sans"',
     'Helvetica',
-    '"Source Han Sans SC"',
     'Arial',
     'sans-serif',
-    '"Apple Color Emoji"'
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"'
   ],
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
-    'Roboto',
-    '"Noto Serif SC"',
-    'SimSun',
-    '"Times New Roman"',
-    'Times',
+    '-apple-system',
+    'BlinkMacSystemFont',
+    '"Segoe UI"',
+    '"Noto Sans"',
+    'Helvetica',
+    'Arial',
     'serif',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-    '"Apple Color Emoji"'
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"'
   ],
   FONT_AWESOME:
     process.env.NEXT_PUBLIC_FONT_AWESOME_PATH ||
