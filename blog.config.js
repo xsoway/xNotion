@@ -49,7 +49,7 @@ const BLOG = {
 
   IMAGE_COMPRESS_WIDTH: process.env.NEXT_PUBLIC_IMAGE_COMPRESS_WIDTH || 800, // 图片压缩宽度默认值，作用于博客封面和文章内容 越小加载图片越快
   IMAGE_ZOOM_IN_WIDTH: process.env.NEXT_PUBLIC_IMAGE_ZOOM_IN_WIDTH || 1200, // 文章图片点击放大后的画质宽度，不代表在网页中的实际展示宽度
-  RANDOM_IMAGE_URL: process.env.NEXT_PUBLIC_RANDOM_IMAGE_URL || '', // 随机图片API,如果未配置下面的关键字，主页封面，头像，文章封面图都会被替换为随机图片
+  RANDOM_IMAGE_URL: process.env.NEXT_PUBLIC_RANDOM_IMAGE_URL || 'images.unsplash.com/', // 随机图片API,如果未配置下面的关键字，主页封面，头像，文章封面图都会被替换为随机图片
   RANDOM_IMAGE_REPLACE_TEXT:
     process.env.NEXT_PUBLIC_RANDOM_IMAGE_NOT_REPLACE_TEXT ||
     'images.unsplash.com', // 触发替换图片的 url 关键字(多个支持用英文逗号分开)，只有图片地址中包含此关键字才会替换为上方随机图片url
@@ -59,17 +59,13 @@ const BLOG = {
   // START ************网站字体*****************
   // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
   // 后面空格隔开的font-light的字体粗细，留空是默认粗细；参考 https://www.tailwindcss.cn/docs/font-weight
-  FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans font-light',
-  // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
+  FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-serif font-medium',
   FONT_URL: [
-    // 'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css',
-    'https://fonts.googleapis.com/css?family=Bitter&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
+  'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap',
+  'https://fonts.googleapis.com/css?family=Bitter&display=swap',
   ],
-  // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
-    // '"LXGW WenKai"',
+    '"Roboto"',
     '"PingFang SC"',
     '-apple-system',
     'BlinkMacSystemFont',
@@ -85,6 +81,18 @@ const BLOG = {
     '"Source Han Sans SC"',
     'Arial',
     'sans-serif',
+    '"Apple Color Emoji"'
+  ],
+  FONT_SERIF: [
+    '"Roboto Slab"',
+    'Bitter',
+    '"Noto Serif SC"',
+    'SimSun',
+    '"Times New Roman"',
+    'Times',
+    'serif',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
     '"Apple Color Emoji"'
   ],
   // 衬线字体 例如'"LXGW WenKai"'
